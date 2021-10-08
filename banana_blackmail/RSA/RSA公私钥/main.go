@@ -53,6 +53,7 @@ func RSAKeyGen(bits int) error {
 func main() {
 	var bits int
 	flag.IntVar(&bits, "b", 1024, "密码默认长度1024")
+	flag.Parse()
 	err := RSAKeyGen(bits)
 	if err != nil {
 		fmt.Println("RSA密码文件生成失败")
